@@ -2,7 +2,7 @@
 #include "../include/point.hpp"
 #include "../raylib/raylib.h"
 
-GameCamera::GameCamera(Point pos, float sensibility, float* delta) : pos(pos), sensibility(sensibility), delta(delta)
+GameCamera::GameCamera(Point pos, float sensibility, float* delta, float scale) : pos(pos), sensibility(sensibility), delta(delta), scale(scale)
 {}
 
 void GameCamera::moveCamera()
@@ -26,10 +26,12 @@ void GameCamera::moveCamera()
     }
 }
 
-void GameCamera::draw()
+Point GameCamera::getPos()
 {
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-    DrawRectangle(this->pos.x, this->pos.y, 960, 540, RED);
-    EndDrawing();
+    return this->pos;
+}
+
+float GameCamera::getScale()
+{
+    return this->scale;
 }

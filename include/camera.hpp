@@ -5,13 +5,16 @@
     class GameCamera
     {
         public:
-            GameCamera(Point pos, float sensibility, float* delta);
+            GameCamera(Point pos, float sensibility, float* delta, float scale);
             void moveCamera();
-            void draw();
+            //getters
+            Point getPos();
+            float getScale();
 
         private:
             Point pos;
             float sensibility;
             float* delta;
+            float scale;
     };
 #endif
