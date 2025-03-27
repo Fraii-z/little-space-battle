@@ -1,6 +1,7 @@
 #ifndef __MOVING_ENTITY__
     #define __MOVING_ENTITY__
     #include "../include/entity.hpp"
+    #include <cstddef>
 
     class GameCamera;
 
@@ -17,5 +18,6 @@
             float speed = 0;
             float direction = 0;
             float angularSpeed = 0;
+            Point destination = { NULL, NULL};
     };
 #endif

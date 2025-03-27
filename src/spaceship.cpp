@@ -7,10 +7,10 @@ MovingEntity(pos, maxSpeed, weight, turnForce, delta, camera)
 
 void SpaceShip::draw(Texture2D& texture)
 {
-    DrawTextureEx(texture, centralize( this->pos - camera->getPos(), {64, 64}, this->direction).toVector2(), this->direction, camera->getScale(), WHITE);
+    DrawTexturePro(texture, {0, 0, 32, 32}, {300, 300, 100, 100}, {50, 50}, this->direction, WHITE);
 }
 
 void SpaceShip::rotate()
 {
-    this->direction++;
+    this->direction += 0.1;
 }

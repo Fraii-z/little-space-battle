@@ -4,3 +4,7 @@ MovingEntity::MovingEntity(Point pos, float maxSpeed, float weight, float turnFo
 Entity(pos, delta, camera), maxSpeed(maxSpeed), weight(weight), turnForce(turnForce)
 {}
 
+void MovingEntity::move()
+{
+
+}

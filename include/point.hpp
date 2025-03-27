@@ -22,6 +22,4 @@
             return { x, y };
         }
     };
-
-    Point centralize(Point pos, Point size, float direction);
 #endif
